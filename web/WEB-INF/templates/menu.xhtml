@@ -1,0 +1,44 @@
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:p="http://primefaces.org/ui"
+              xmlns:ui="http://java.sun.com/jsf/facelets"
+              xmlns:h="http://java.sun.com/jsf/html"
+              xmlns:f="http://java.sun.com/jsf/core">
+    <style type="text/css">
+        .ui-layout-west {
+            z-index:20 !important;
+        }
+
+        .ui-layout-west .ui-layout-unit-content {
+            overflow:visible !important;
+        }
+
+        .ui-menuitem-text {
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .tamanho-menu{width: 170px;margin: 0px;}
+        .tamanho-panel{width: 200px; margin: 0px;}
+    </style>
+    <h:form>
+        <p:panel header="Menu" styleClass="tamanho-panel">
+            <p:menu styleClass="tamanho-menu" >
+                <p:menuitem value="Início" action="#{principal.TelaPrincipal()}"/>
+                <p:menuitem value="Bater Ponto" action="#{principal.TelaBaterPonto()}"/> 
+                <p:submenu label="Usuário">
+                    <p:menuitem value="Cadastrar" action="#{principal.TelaVerificarUsuario()}"/> 
+                    <p:menuitem value="Visualizar Tempo" action="#{principal.TelaVerificarUsuario2()}"/>
+                    <p:menuitem value="Lista Ativos" action="#{principal.TelaListaAtivos()}"/>
+                </p:submenu>
+                <p:submenu label="WebTec">
+                    <p:menuitem value="Quem Somos?" action="#{principal.TelaQuemSomos()}"/> 
+                    <p:menuitem value="Plano de Marketing" action="#{principal.TelaPlanoDeMarketing()}"/>
+
+                </p:submenu>
+
+            </p:menu>
+        </p:panel>       
+
+
+    </h:form>    
+</ui:component>
+

@@ -1,0 +1,58 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="titulo">Quem Somos</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            
+                <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+
+                <p:tabView style="background-color: white">  
+
+                    <p:tab title="A Empresa">  
+                        <h:panelGrid columns="1" cellpadding="10">  
+
+                            <h:outputText style="-ms-layout-grid-line: auto" value=" A Empresa WebTec localizada em Diamantina no estado Minas Gerais, formada por
+                                          acadêmicos da Universidade Federal dos Vales Do Jequitinhonha e Mucuri-UFVJM, tem o objetivo de criar
+                                          pequenos sistemas e softwares voltados para a Web."/>
+                            <p:gmap center="-18.202447, -43.574824" zoom="15" type="HYBRID" style="width:600px;height:400px" />
+                        </h:panelGrid>  
+                    </p:tab>  
+                    <p:tab title="Missão">  
+                        <h:panelGrid columns="2" cellpadding="10">  
+                            <p:graphicImage value="/imagens/missao.jpg" height="200px" style="margin: auto;" />  
+                            <h:outputText value=" Produzir softwares de qualidade, que atendam as necessidades dos clientes.
+                                          "></h:outputText>
+                        </h:panelGrid>  
+                    </p:tab>  
+                    <p:tab title="Visão">  
+                        <h:panelGrid columns="2" cellpadding="10">  
+                            <p:graphicImage value="/imagens/visao.jpg" height="200px" style="margin: auto;" />  
+                            <h:outputText value="Alcançar excelência na produção de softwares, conseguindo reconhecimento no mercado interno."></h:outputText>
+                        </h:panelGrid>  
+                    </p:tab>  
+
+                    <p:tab title="Valores">  
+                        <h:panelGrid columns="2" cellpadding="10">  
+                            <p:graphicImage value="/imagens/valores.jpg" height="200px" style="margin: auto;" />  
+                            <h:panelGrid columns="1">
+                                <h:outputText value="1-Absoluta honestidade nas relações comerciais e humanas com clientes, fornecedores e funcionários;"/>
+                                <h:outputText value="2-Qualidade em tudo o que for produzido;"/>
+                                <h:outputText value="3-Comprometimento com os resultados para o cliente;"/>
+                                <h:outputText value="4-Qualidade de vida no trabalho;"/>
+                                <h:outputText value="5-Busca da excelência na formação da equipe de trabalho;"/>
+                                <h:outputText value="6-Busca da excelência no desenvolvimento de produtos;"/>
+                                <h:outputText value="7-Pesquisa e desenvolvimento em Tecnologia da Informação."/>
+                            </h:panelGrid>
+                        </h:panelGrid>  
+                    </p:tab>
+                </p:tabView>  
+
+
+            
+        </h:form>
+    </ui:define>
+</ui:composition>

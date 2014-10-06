@@ -1,0 +1,26 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="titulo">Início</ui:define>
+    <ui:define name="corpo">
+        <h:form>
+            <p:panel header="Controle de Pontos - WebTec">
+
+                <script language='javascript' src='scripts/clock.js'></script>
+               <center><h1> <font  style="font-size: 30px" color="blue">
+                    <span  style="font-size: 80px " id='clock_tm' >Hora Atual</span></font></h1></center>
+                <center><h1> <font  style="font-size: 30px" color="#CC3300"> <span id='clock_dt' >Data Atual</span></font></h1></center> 
+
+                <script language='javascript'>
+                    StartClock('d/m/Y','H:i:s');
+                </script>
+                              
+                <center><h1><h:outputText value="Seja Bem Vindo ao Controlador de Pontos da WebTec!" style="color:black"/></h1></center>
+               
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>

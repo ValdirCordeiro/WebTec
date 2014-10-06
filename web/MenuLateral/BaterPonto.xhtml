@@ -1,0 +1,37 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns="http://www.w3.org/1999/xhtml">
+    <ui:define name="titulo">Bater Ponto</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            <p:panel header="Bater Ponto">
+                <h:panelGrid columns="2">
+                    <h:panelGrid columns="1">
+                        <p:graphicImage value="/imagens/baterponto.jpg" height="250px" style="margin: auto;" />
+                        
+                    </h:panelGrid>
+
+                    <h:panelGrid columns="1">
+                        <h:panelGrid columns="2">
+                            <h:outputText value="Login:"/>
+                            <p:inputText value="#{principal.nome}" required="true" requiredMessage="Digite o Login" />
+                            <h:outputText value="Senha:"/>
+                            <p:password value="#{principal.senha}" required="true" requiredMessage="Digite a senha"/>  
+                            
+
+                            <p:commandButton value="Entrar" action="#{principal.BaterPonto()}" ajax="false"/>
+                            <p:commandButton value="Voltar" action="#{principal.TelaPrincipal()}" ajax="false"/>
+                        </h:panelGrid>
+
+
+                    </h:panelGrid>
+
+                </h:panelGrid>
+
+            </p:panel>
+        </h:form>   
+    </ui:define>
+</ui:composition>

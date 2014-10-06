@@ -1,0 +1,41 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="titulo">Visualizar Tempo de Trabalho</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            <p:panel header="Visualizar Tempo de Trabalho dos Usuários">
+
+                <p:dataTable value="#{principal.listaFuncionario}" paginator="true"  rowsPerPageTemplate="5,10,15" rows="10" styleClass="custom-datatable" var="doc">
+                    <f:facet name="header">
+                        <h:outputText value="Relação De Tempo dos Usuários"/>
+                    </f:facet>
+                    <p:column>                        
+                        <f:facet name="header">
+                            <h:outputText value="Nome"/>
+                        </f:facet> 
+                        <p:commandLink style="margin-right:20px; color: blue" ajax="false" action="#{principal.Descricao(doc)}">  
+                           <h:outputText value="#{doc.nome}"/>
+                        </p:commandLink>                   
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="CPF"/>                        
+                        </f:facet>  
+                        <h:outputText value="#{doc.CPF}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Gerar Folha De Ponto"/>
+                        </f:facet>                        
+                        <center><p:commandButton title="Gerar Folha de ponto" value="Gerar" action="#{principal.TelaFolhaDePonto()}"/></center>
+                    </p:column>
+                </p:dataTable>
+
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>

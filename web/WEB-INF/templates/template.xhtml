@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>WebTec - <ui:insert name="titulo">Título da página</ui:insert></title>
+        <style>
+            .corpo{
+                margin: auto;
+                width: 1000px;
+                height: 100%;
+                background-color: #cce4ea;
+            }
+            .ui-layout-north{
+                border: 0;
+            }
+        </style>
+    </h:head>
+
+    <h:body class="corpo">
+        <p:layout style="min-width: 800px; min-height: 800px">
+            <p:layoutUnit position="north">
+                <h:form>
+                    <center>
+                        <h:graphicImage value="/imagens/WebTec.png" height="200px" style="margin: auto;"/>
+                    </center>
+                </h:form>
+            </p:layoutUnit>
+            <p:layoutUnit position="west" style="height: inherit" >
+                <ui:insert name="menu">
+                    <ui:include src="menu.xhtml" />
+                </ui:insert>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center" style="height: inherit" >
+                <ui:insert name="corpo" />
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+
+</html>

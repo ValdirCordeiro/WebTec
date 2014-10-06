@@ -1,0 +1,21 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="titulo">Entrada do Usuário</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            <p:panel header="Entrada do Usuário">
+
+                <br/>
+                <center><h:outputText style="font-size: 40px" value="Ponto do usuário #{principal.funcentrada.nome} registrado"/></center>
+                <br/>
+                <p:commandButton value="Voltar" action="#{principal.TelaBaterPonto()}"/>
+                
+
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>

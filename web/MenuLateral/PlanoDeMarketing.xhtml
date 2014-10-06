@@ -1,0 +1,84 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns="http://www.w3.org/1999/xhtml">
+    <ui:define name="titulo">Plano de Marketing</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            <p:panel header="Plano de Marketing">
+                <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+                <p:panel header="Descrição dos principais produtos e serviços"><br/>
+                    <h:outputText style="font-weight: bold" value="Principais produtos: "/>
+                    <h:outputText value=" Aplicativos para WEB - Aplicativos para uso em ambiente WEB através de um navegador. 
+                                  Podem ser restritos a um grupo específico ou abertos para toda a rede. 
+                                  O uso de banco de dados estará condicionado à necessidade do aplicativo."/><br/><br/>
+
+                    <h:outputText style="font-weight: bold" value="Produto/serviço: "/>
+                    <h:outputText value=" Aplicativo para registro de ponto."/><br/>
+
+                </p:panel>
+
+                <p:panel header="Preço"><br/>
+                    <h:outputText style="font-weight: bold" value="Estratégias de precificação: "/>
+                    <h:outputText value=" Será considerado o tempo necessário para desenvolver o incremento solicitado e os os recursos humanos necessários 
+                                  para o desenvolvimento e implementação do mesmo."/><br/><br/>
+
+                </p:panel>
+
+                <p:panel header="Estratégias promocionais"><br/>
+                    <h:outputText style="font-weight: bold" value="Estratégias de promoção e divulgação: "/>
+                    <h:outputText value=" A empresa, bem como seus produtos, serão divulgados primeiramente por meio de redes sociais; 
+                                  Parcerias com sites especializados e blogs de visitação pública; Anúncios em sites de busca;"/><br/><br/>
+
+                </p:panel>
+
+                <p:panel header="Estrutura de comercialização"><br/>
+                    <h:outputText style="font-weight: bold" value="Formas de comercialização e distribuição: "/>
+                    <h:outputText value=" O contato inicial com o cliente será feito por iniciativa do mesmo através de e-mail, 
+                                  mensagens em páginas oficiais da empresa, telefone ou visita física. Após a etapa inicial de comunicação, 
+                                  negociação e contratação, um analista de sistemas da WebTec visitará o cliente para o recolhimento inicial 
+                                  de requisitos e definição de regras de negócio para, posteriormente, começar a confecção do produto."/><br/><br/>
+
+                </p:panel>
+
+                <p:panel header="Organograma"><br/>
+                    <center><p:graphicImage value="/imagens/Organograma.png" height="500px" style="margin: auto;" /></center>
+                    <br/><br/>
+                    <h:outputText style="font-weight: bold" value="Gerente Executivo:  "/>
+                    <h:outputText value="Irá tratar das questões financeiras e de marketing da empresa,
+                                  bem como os assuntos externos, relação com clientes e fornecedores."/><br/><br/>
+                    <h:outputText style="font-weight: bold" value="Gerente de Projeto: "/>
+                    <h:outputText value="Fazer o papel do analista, recolhendo informações e requisitos com o cliente,
+                                  para depois passar essas informações ao desenvolvedor."/><br/><br/>
+                    <h:outputText style="font-weight: bold" value="Gerente de Implantação: "/>
+                    <h:outputText value="Após concluída uma primeira versão do sistema,
+                                  caberá a esse gerente executar testes e levar o sistema ao conhecimento do cliente, 
+                                  para a verificação dos requisitos, se precisar de alguma incrementação esse se reportará ao gerente de projeto"/><br/><br/>
+                    <h:outputText style="font-weight: bold" value="Desenvolvedor: "/>
+                    <h:outputText value="Caberá a esse receber as informações coletadas pelo gerente de
+                                  projeto, para assim dar inicio a confecção do software.Qualquer problema ele deverá se
+                                  reportar ao próprio gerente de projeto."/><br/>
+
+                </p:panel>
+
+                <p:panel header="Localização do negócio"><br/>
+                    <h:outputText style="font-weight: bold" value="Endereço: "/>
+                    <h:outputText value="Rodovia MGT 367 - KM 583 - nº 5000"/><br/>
+                    <h:outputText style="font-weight: bold" value="Bairro: "/>
+                    <h:outputText  value="Alto da Jacuba"/><br/>
+                    <h:outputText style="font-weight: bold" value="Cidade: "/>
+                    <h:outputText value="Diamantina"/><br/>
+                    <h:outputText style="font-weight: bold" value="Estado: "/>
+                    <h:outputText  value="Minas Gerais"/><br/><br/>
+                    <h:outputText style="font-weight: bold" value="Considerações sobre o ponto: "/>
+                    <h:outputText value="Endereço do Campus JK da UFVJM. Local onde as reuniões acerca do projeto serão realizadas. Projeto para fins educacionais."/><br/>
+                    <br/>
+                    <p:gmap center="-18.202447, -43.574824" zoom="15" type="HYBRID" style="width:600px;height:400px" />
+                </p:panel>
+
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>

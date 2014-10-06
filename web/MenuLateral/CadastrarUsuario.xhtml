@@ -1,0 +1,45 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="titulo">Cadastrar Usuário</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            <p:panel header="Cadastrar Usuário">
+                <h:panelGrid columns="2">
+                    <h:outputText value="Nome: "/>
+                    <p:inputText value="#{principal.nome2}" required="true" requiredMessage="Preencha o nome:" />
+                    <h:outputText value="CPF: "/>
+                    <p:inputText value="#{principal.cpf}"  />
+                    <h:outputText value="login: "/>
+                    <p:inputText value="#{principal.login}" required="true" requiredMessage="Preencha o Login:" />
+                    <h:outputText value="Endereço:"/>
+                    <p:inputText value="#{principal.rua}" required="true" requiredMessage="Preencha o Endereço:" />
+                    <h:outputText value="Cidade:"/>
+                    <p:inputText value="#{principal.cidade}" required="true" requiredMessage="Preencha a Cidade:" />
+                    <h:outputText value="Estado:"/>
+                    <p:inputText value="#{principal.estado}" required="true" requiredMessage="Preencha o Estado:" />
+                    <h:outputText value="CEP: "/>
+                    <p:inputText value="#{principal.cep}" required="true" requiredMessage="Preencha o CEP:" />
+
+                    <h:outputText value="Tipo de Usuário: "/>
+                    <p:selectOneRadio value="#{principal.admin}" required="true" requiredMessage="Selecione um tipo usuário" layout="pageDirection"> 
+                        <f:selectItem itemLabel="Administrador" itemValue="Administrador" />
+                        <f:selectItem itemLabel="Comum" itemValue="Comum" />                        
+                    </p:selectOneRadio> 
+                  
+                    <h:panelGrid columns="2">
+                    <p:commandButton value="Cadastrar" action="#{principal.CadastrarFuncionario()}" ajax="false"/>
+                    <p:commandButton value="Voltar" action="#{principal.TelaPrincipal()}" ajax="false"/>
+
+                    </h:panelGrid>
+                </h:panelGrid>
+
+
+            </p:panel>
+
+        </h:form>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,42 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="titulo">Descrição do Usuário</ui:define>
+    <ui:define name="corpo">
+        <h:form id="Formulario1">
+            <p:panel header="Descrição do Usuário">
+                <h:panelGrid columns="3">
+                    <h:outputText value="Nome: "/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.nome}"/> <br/>                  
+                    <h:outputText value="CPF: "/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.CPF}"/><br/>   
+                    <h:outputText value="login: "/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.login}"/><br/>   
+                    <h:outputText value="Endereço:"/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.rua}"/><br/>   
+                    <h:outputText value="Cidade:"/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.cidade}"/><br/>   
+                    <h:outputText value="Estado:"/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.estado}"/><br/>   
+                    <h:outputText value="CEP: "/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.CEP}"/><br/>   
+
+                    <h:outputText value="Tipo de Usuário: "/>
+                    <h:outputText style="font-weight: bold" value="#{principal.funcdescricao.administrador}"/><br/>   
+                  
+                   
+                    
+                    <p:commandButton value="Voltar" action="#{principal.TelaVisualizarTempo()}" ajax="false"/>
+
+                   
+                </h:panelGrid>
+
+
+            </p:panel>
+
+        </h:form>
+    </ui:define>
+</ui:composition>
